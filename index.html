@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TenorBas Stemmenwerk</title>
+    <meta name="description" content="Geef uw verhaal de klank die het verdient. Jan Korving biedt veelzijdig stemmenwerk voor voice-overs en bedrijfscommunicatie. Beluister nu de narratieve en commerciële demo's.">
+    <link rel="icon" type="image/x-icon" href="afbeelding/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="bg-fixed"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="wrapper">
+      <div class="container">
+        <h1>TenorBas Stemmenwerk</h1>
+        <div class="separator">Jan Korving</div>
+
+        <img src="afbeelding/Jan.png" alt="Jan Korving" class="profile-img" />
+
+        <p>
+          Bent u op zoek naar een warme, dragende kracht van een <b>bas</b> tot de heldere, vertellende toon van een <b>tenor</b> voor een bedrijfsfilm, een meeslepende voice-over voor een documentaire, of een krachtige boodschap, ik geef uw verhaal de juiste klank.
+        </p>
+
+        <p>
+          Benieuwd hoe mijn stem klinkt? Luister hieronder naar mijn demo's en download direct mijn gegevens.
+        </p>
+
+        <h3 class="audio-title">Commercials</h3>
+        <div class="custom-audio-player">
+          <audio class="audioElement" preload="auto" playsinline>
+            <source src="demos/Jan - Commercials Demo.mp3" type="audio/mpeg" />
+          </audio>
+          <button class="player-btn playPauseBtn">&#128266;</button>
+          <input type="range" class="slider progress progressBar" value="0" max="100" step="0.1" />
+          <span class="time-text timeDisplay">00:00</span>
+          
+          <div class="volume-controls">
+            <button class="muteBtn" style="background:none; border:none; cursor:pointer; padding:0; font-size:16px; color:#888;">&#128266;</button>
+            <input type="range" class="slider volume volumeBar" value="100" max="100" min="0" />
+          </div>
+        </div>
+
+        <h3 class="audio-title">Narratief & Corporate</h3>
+        <div class="custom-audio-player">
+          <audio class="audioElement" preload="auto" playsinline>
+            <source src="demos/Jan - Narratief & Corporate Demo.mp3" type="audio/mpeg" />
+          </audio>
+          <button class="player-btn playPauseBtn">&#128266;</button>
+          <input type="range" class="slider progress progressBar" value="0" max="100" step="0.1" />
+          <span class="time-text timeDisplay">00:00</span>
+          
+          <div class="volume-controls">
+            <button class="muteBtn" style="background:none; border:none; cursor:pointer; padding:0; font-size:16px; color:#888;">&#128266;</button>
+            <input type="range" class="slider volume volumeBar" value="100" max="100" min="0" />
+          </div>
+        </div>
+
+        <a href="#" class="download-btn">Download Portfolio (PDF)</a>
+      </div>
+    </div>
+
+    <script src="scripts/audioplayer.js"></script>
+  </body>
+</html>
