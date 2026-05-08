@@ -15,7 +15,7 @@ body, html {
   height: 100vh;
   z-index: -2;
   /* Achtergrondpositie op 90% houdt de toren rechts */
-  background: url("afbeelding/vuurtoren2.jpg") no-repeat 90% center; 
+  background: url("afbeelding/vuurtoren2.webp") no-repeat 90% center; 
   background-size: cover;
   filter: blur(2px);
   transform: scale(1.1);
