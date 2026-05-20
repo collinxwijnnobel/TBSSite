@@ -205,6 +205,23 @@ p {
   background-color: #002244;
 }
 
+.site-footer {
+  position: fixed;
+  bottom: 20px;       /* Ruimte vanaf de absolute onderkant van het scherm */
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Centreert de foto horizontaal op het scherm */
+  z-index: 10;        /* Zorgt dat de foto boven de achtergrond-overlay zweeft */
+  pointer-events: none; /* Voorkomt dat de footer onzichtbaar klikbare ruimte blokkeert */
+}
+
+.footer-badge {
+  width: 140px;       /* Pas de breedte van de foto hier naar wens aan */
+  height: auto;
+  pointer-events: auto; /* Zorgt dat er eventueel wel op de afbeelding geklikt kan worden */
+}
+
 /* --- MOBIEL --- */
 @media (max-width: 768px) {
 
@@ -226,6 +243,7 @@ p {
 
   .wrapper {
     padding: 5vh 5vw;
+    flex-direction: column;
     justify-content: center;
     padding-left: 5vw; /* Reset de 28vw padding voor mobiel */
   }
@@ -261,5 +279,12 @@ p {
     margin: 20px auto;
     padding: 15px 20px; /* Vaste padding op mobiel voor betere klikbaarheid */
     font-size: 1.1rem;
+  }
+
+  .site-footer {
+    position: relative; /* Haalt de 'fixed' positie weg op mobiel */
+    bottom: auto;
+    width: 100%;
+    margin: 4vh auto;   /* Geeft wat ademruimte onder de downloadknop */
   }
 }
