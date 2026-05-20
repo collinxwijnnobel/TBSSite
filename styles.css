@@ -217,7 +217,7 @@ p {
 }
 
 .footer-badge {
-  width: 140px;       /* Pas de breedte van de foto hier naar wens aan */
+  width: 195px;       /* Pas de breedte van de foto hier naar wens aan */
   height: auto;
   pointer-events: auto; /* Zorgt dat er eventueel wel op de afbeelding geklikt kan worden */
 }
