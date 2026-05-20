@@ -40,7 +40,7 @@ body, html {
 .wrapper {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 10vh) !important;
   /* Gebruik van vw voor de exacte 'Foto 2' positie */
   padding-left: 28vw; 
   padding-right: 20vw;
@@ -121,7 +121,6 @@ p {
   border-radius: 10px;
   padding: 10px 20px;
   margin: 30px 0;
-  max-width: 550px;
   gap: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -188,10 +187,29 @@ p {
 .muteBtn:hover {
   opacity: 0.7;
 }
+/* --- EXTRA STEVIGE STYLING VOOR DE KNOPPEN --- */
+.btn-group {
+  display: flex !important;       /* Dwing Flexbox af */
+  flex-direction: row !important; /* Altijd naast elkaar op desktop */
+  gap: 15px !important;
+  margin-top: 3vh !important;
+  width: 100% !important;
+}
+
+.btn-group .download-btn {
+  flex: 1 !important;             /* Verdeel de ruimte 50/50 voor gelijke grootte */
+  display: inline-flex !important;/* Flexbox binnen de knop voor perfecte centrering */
+  justify-content: center !important; /* Centreert tekst horizontaal */
+  align-items: center !important;    /* Centreert tekst verticaal */
+  text-align: center !important;
+  box-sizing: border-box !important;
+  padding: 15px 0 !important;     /* Vaste padding voor een mooie hoogte */
+  margin: 0 !important;
+}
 
 /* --- KNOP --- */
 .download-btn {
-  display: inline-block;
+  display: flex;
   padding: 1.5vh 3vw;
   background-color: #003366;
   color: white;
@@ -199,6 +217,7 @@ p {
   border-radius: 6px;
   font-weight: 700;
   transition: background 0.3s;
+  text-align: center;
 }
 
 .download-btn:hover {
@@ -206,20 +225,17 @@ p {
 }
 
 .site-footer {
-  position: fixed;
-  bottom: 20px;       /* Ruimte vanaf de absolute onderkant van het scherm */
-  left: 0;
-  width: 100vw;
+  width: 100%;
   display: flex;
-  justify-content: center; /* Centreert de foto horizontaal op het scherm */
-  z-index: 10;        /* Zorgt dat de foto boven de achtergrond-overlay zweeft */
-  pointer-events: none; /* Voorkomt dat de footer onzichtbaar klikbare ruimte blokkeert */
+  justify-content: center; /* Centreert de afbeelding exact in het midden van het scherm */
+  align-items: center;        /* Ruimte tussen de wrapper/content en de foto */
+  box-sizing: border-box;
 }
 
 .footer-badge {
-  width: 195px;       /* Pas de breedte van de foto hier naar wens aan */
+  width: 195px;            /* Pas de breedte van de foto hier naar wens aan */
   height: auto;
-  pointer-events: auto; /* Zorgt dat er eventueel wel op de afbeelding geklikt kan worden */
+  display: block;
 }
 
 /* --- MOBIEL --- */
@@ -242,7 +258,7 @@ p {
   }
 
   .wrapper {
-    padding: 5vh 5vw;
+    padding: 5vh 5vw 0vh;
     flex-direction: column;
     justify-content: center;
     padding-left: 5vw; /* Reset de 28vw padding voor mobiel */
@@ -273,18 +289,16 @@ p {
     display: none;
   }
 
-  .download-btn {
-    display: block; /* Knop neemt volledige breedte van container in op mobiel */
-    width: 90%;    /* Iets smaller dan het scherm voor ademruimte */
-    margin: 20px auto;
-    padding: 15px 20px; /* Vaste padding op mobiel voor betere klikbaarheid */
-    font-size: 1.1rem;
+  .btn-group {
+    flex-direction: column !important; /* Dwing onder elkaar op mobiel */
+    max-width: 100% !important;
+    align-items: center !important;
   }
 
-  .site-footer {
-    position: relative; /* Haalt de 'fixed' positie weg op mobiel */
-    bottom: auto;
-    width: 100%;
-    margin: 4vh auto;   /* Geeft wat ademruimte onder de downloadknop */
+  .btn-group .download-btn {
+    flex: none !important;             /* Schakel de 50/50 verdeling uit */
+    width: 90% !important;             /* Maak ze breed op mobiel */
+    margin: 10px auto !important;
   }
+
 }
