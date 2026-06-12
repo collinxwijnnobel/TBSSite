@@ -14,8 +14,7 @@ body, html {
   width: 100vw;
   height: 100vh;
   z-index: -2;
-  /* Achtergrondpositie op 90% houdt de toren rechts */
-  background: url("afbeelding/vuurtoren2.webp") no-repeat 90% center; 
+  background: url("afbeelding/vuurtoren.webp") no-repeat 90% center; 
   background-size: cover;
   filter: blur(2px);
   transform: scale(1.1);
@@ -36,27 +35,24 @@ body, html {
   );
 }
 
-/* --- LAYOUT POSITIONERING --- */
 .wrapper {
   display: flex;
   align-items: center;
   min-height: calc(100vh - 10vh) !important;
-  /* Gebruik van vw voor de exacte 'Foto 2' positie */
   padding-left: 28vw; 
   padding-right: 20vw;
   box-sizing: border-box;
 }
 
 .container {
-  max-width: 600px; /* Max-width in px is veiliger voor leesbaarheid van tekst */
+  max-width: 600px;
   width: 100%;
   text-align: left;
 }
 
-/* --- TYPOGRAFIE --- */
 h1 {
   color: #003366;
-  font-size: 3em; /* Schaalt mee met de hoogte van het scherm */
+  font-size: 3em;
   margin: 0;
   font-weight: 400;
 }
@@ -71,7 +67,6 @@ h1 {
   letter-spacing: 2px;
 }
 
-/* Lijn aan de linkerkant */
 .separator::before {
   content: "";
   flex: 1;
@@ -86,17 +81,16 @@ h1 {
   margin-left: 2vw;
 }
 
-/* --- TITELS VOOR AUDIO FRAGMENTEN --- */
 .audio-title {
   color: #003366;
   font-size: 1.1rem;
-  margin-bottom: -20px; /* Trekt de titel dichter naar de player */
+  margin-bottom: -20px;
   font-weight: 600;
 }
 
 .profile-img {
-  width: 5vw; /* Schaalt mee met breedte */
-  min-width: 150px; /* Voorkomt dat hij te klein wordt op kleine laptops */
+  width: 5vw;
+  min-width: 150px;
   height: auto;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -112,7 +106,6 @@ p {
   margin-bottom: 2vh;
 }
 
-/* --- AUDIO PLAYER (STYLING ONGEWIJZIGD) --- */
 .custom-audio-player {
   display: flex;
   align-items: center;
@@ -159,11 +152,11 @@ p {
 
 .volume-controls {
   display: flex;
-  align-items: center; /* Zorgt voor verticale uitlijning van icoon en slider */
+  align-items: center; 
   justify-content: center;
   gap: 8px;
-  flex-shrink: 0; /* Voorkomt dat deze sectie te veel in elkaar drukt */
-  height: 100%;   /* Neemt de volledige hoogte van de player balk */
+  flex-shrink: 0;
+  height: 100%;
 }
 
 .slider::-webkit-slider-thumb {
@@ -187,23 +180,23 @@ p {
 .muteBtn:hover {
   opacity: 0.7;
 }
-/* --- EXTRA STEVIGE STYLING VOOR DE KNOPPEN --- */
+
 .btn-group {
-  display: flex !important;       /* Dwing Flexbox af */
-  flex-direction: row !important; /* Altijd naast elkaar op desktop */
+  display: flex !important;
+  flex-direction: row !important;
   gap: 15px !important;
   margin-top: 3vh !important;
   width: 100% !important;
 }
 
 .btn-group .download-btn {
-  flex: 1 !important;             /* Verdeel de ruimte 50/50 voor gelijke grootte */
-  display: inline-flex !important;/* Flexbox binnen de knop voor perfecte centrering */
-  justify-content: center !important; /* Centreert tekst horizontaal */
-  align-items: center !important;    /* Centreert tekst verticaal */
+  flex: 1 !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   text-align: center !important;
   box-sizing: border-box !important;
-  padding: 15px 0 !important;     /* Vaste padding voor een mooie hoogte */
+  padding: 15px 0 !important;
   margin: 0 !important;
 }
 
@@ -227,13 +220,13 @@ p {
 .site-footer {
   width: 100%;
   display: flex;
-  justify-content: center; /* Centreert de afbeelding exact in het midden van het scherm */
-  align-items: center;        /* Ruimte tussen de wrapper/content en de foto */
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
 }
 
 .footer-badge {
-  width: 195px;            /* Pas de breedte van de foto hier naar wens aan */
+  width: 195px;
   height: auto;
   display: block;
 }
@@ -242,15 +235,15 @@ p {
 @media (max-width: 768px) {
 
   h1 {
-    font-size: clamp(1.8rem, 10vw, 2.5rem); /* Iets agressiever schalen op mobiel */
-    padding: 0 10px; /* Geeft de letters wat ademruimte bij de randen */
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    padding: 0 10px;
   }
 
   .bg-fixed {
-    left: 0; /* CRUCIAAL: Reset de verschuiving op mobiel */
+    left: 0;
     width: 100vw;
-    background-position: center center; /* Vuurtoren centraal voor mobiel */
-    opacity: 0.4; /* Maakt achtergrond rustiger achter tekst */
+    background-position: center center;
+    opacity: 0.4;
   }
 
   .bg-overlay {
@@ -261,7 +254,7 @@ p {
     padding: 5vh 5vw 0vh;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5vw; /* Reset de 28vw padding voor mobiel */
+    padding-left: 5vw;
   }
 
   .container {
@@ -290,14 +283,14 @@ p {
   }
 
   .btn-group {
-    flex-direction: column !important; /* Dwing onder elkaar op mobiel */
+    flex-direction: column !important;
     max-width: 100% !important;
     align-items: center !important;
   }
 
   .btn-group .download-btn {
-    flex: none !important;             /* Schakel de 50/50 verdeling uit */
-    width: 90% !important;             /* Maak ze breed op mobiel */
+    flex: none !important;
+    width: 90% !important;
     margin: 10px auto !important;
   }
 
