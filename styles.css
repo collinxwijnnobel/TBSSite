@@ -16,7 +16,7 @@ body, html {
   z-index: -2;
   background: url("afbeelding/vuurtoren.webp") no-repeat 90% center; 
   background-size: cover;
-  filter: blur(2px);
+  filter: blur(1.5px);
   transform: scale(1.1);
 }
 
